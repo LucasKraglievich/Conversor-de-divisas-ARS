@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conversor ARS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Conversor de Divisas 💱</h1>
+    <p class="subtitle">Cotizaciones en tiempo real</p>
+
+    <!-- Tarjetas con las cotizaciones actuales -->
+    <div class="cards">
+      <div class="card">
+        <p class="card-title">Dólar Oficial</p>
+        <p class="card-value" id="rate-oficial">Cargando...</p>
+      </div>
+      <div class="card">
+        <p class="card-title">Dólar Blue</p>
+        <p class="card-value" id="rate-blue">Cargando...</p>
+      </div>
+      <div class="card">
+        <p class="card-title">USDT Cripto</p>
+        <p class="card-value" id="rate-crypto">Cargando...</p>
+      </div>
+    </div>
+
+    <!-- Formulario de conversión -->
+    <div class="form">
+
+      <div class="field">
+        <label for="amount">Monto</label>
+        <input type="number" id="amount" value="100" min="0" placeholder="Ingresá un monto" />
+      </div>
+
+      <div class="field">
+        <label for="from">De</label>
+        <select id="from">
+          <option value="ARS">ARS - Peso argentino</option>
+          <option value="USD">USD - Dólar</option>
+          <option value="BRL">BRL - Real brasileño</option>
+          <option value="EUR">EUR - Euro</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="tipo">Tipo de cambio</label>
+        <select id="tipo">
+          <option value="oficial">Oficial</option>
+          <option value="blue">Blue</option>
+          <option value="crypto">USDT Cripto</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="to">A</label>
+        <select id="to">
+          <option value="USD">USD - Dólar</option>
+          <option value="ARS">ARS - Peso argentino</option>
+          <option value="BRL">BRL - Real brasileño</option>
+          <option value="EUR">EUR - Euro</option>
+        </select>
+      </div>
+
+      <button onclick="convertir()">Convertir</button>
+
+    </div>
+
+    <!-- Resultado -->
+    <div class="resultado" id="resultado">
+      El resultado aparece acá
+    </div>
+
+    <p class="update-time" id="update-time"></p>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
